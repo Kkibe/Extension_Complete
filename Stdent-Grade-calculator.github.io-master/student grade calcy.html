@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>practice</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+	
+		<style>
+
+* {
+  box-sizing: border-box;
+}
+body {
+	     background-image: linear-gradient(45deg, #673AB7, transparent);
+	 background-size: 100% 100%;
+	 height: 100vh;
+}
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+
+
+}
+button{
+   background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+a:hover {
+  background-color: #45a049;	
+}
+.container {
+	width:800px;
+	margin:40px auto;
+	/* margin-right: 50px; */
+/*   margin-left: 220px; */
+	box-shadow: 3px 0px 12px 0px black;
+  border-radius: 5px;
+  background-image: linear-gradient(rgba(0,0,0,0.3),rgba(191,227,232));
+  padding: 20px;
+  
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.btn{
+
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+ 
+  <div class="btn">
+ <h3>Name..<span id="name"></span></h3>
+  <hr>
+   <h3>Roll number..<span id="name1"></span></h3>
+    <hr>
+  <p style="color:red;"id="demo"></p>
+  <span id="demo1"></span>
+</div>
+	
+  <form action="#" onsubmit="return false">
+  <div class="row">
+    <div class="col-25">
+      <label for="wd"><b>Web Development<b></label><span style="color:red">*</span>
+    </div>
+    <div class="col-75">
+     <input type="text" id="wd" name="firstname"  placeholder="Your score.." autocomplete="off"maxlength="3" >
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="Math">Math</label> <span style="color:red">*</span>
+    </div>
+    <div class="col-75">
+     <input type="text" id="math" name="lastname" placeholder="Your score.." autocomplete="off" maxlength="3">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="physics">Physics</label><span style="color:red">*</span>
+    </div>
+    <div class="col-75"> 
+           <input type="text" id="phy" name="lastname" placeholder="Your score" autocomplete="off" maxlength="3">
+    </div>
+  </div>
+    <div class="row">
+    <div class="col-25">
+      <label for="chemistry">Chemistry</label> <span style="color:red">*</span>
+    </div>
+    <div class="col-75">
+     <input type="text" id="chem" name="lastname" placeholder="Your score" autocomplete="off" maxlength="3">
+    </div>
+  </div>
+ 
+  <div class="row">
+    <input type="submit" value="Submit" onclick="calc()">
+   <input type="submit" value="Reset" onclick="res()"> 
+
+   <div id="right">
+   	<br>
+   	<span style="color:red">* 
+   	NAN means Not a Number.  Fill your data carefully</span>
+   </div>
+   <hr>
+   <p id="showdata"></p>
+   
+
+  </div>
+  </form>
+</div>
+  <script type="text/javascript">
+     document.querySelector("#name").innerHTML=localStorage.getItem("txtname");
+      document.querySelector("#name1").innerHTML=localStorage.getItem("roll");
+    var bleep=new Audio();
+    bleep.src="bleep.mp3";
+  	function calc() {
+  		
+  		var wd=parseFloat(document.getElementById("wd").value);
+
+  		var math=parseFloat(document.getElementById("math").value);
+  		var phy=parseFloat(document.getElementById("phy").value);
+  		var chem=parseFloat(document.getElementById("chem").value);
+  		var grades="";
+       
+  		toralscore=wd+math+phy+chem;
+  		// alert(toralscore);
+  		var perc=(toralscore/400)*100;
+  		
+  		// alert(perc)
+  		if(perc<=100 && perc>=80)
+  		{
+  			grades='A';
+        }
+  		else if(perc<=79 && perc>=60) {
+                   grades='B';
+               }
+        else if(perc<=59 && perc>=40) {
+                   grades='C';
+               }   
+               else {
+               	 grades='F';
+               } 
+
+               if(perc>=39.5)
+                 {
+                 	 document.getElementById("showdata").innerHTML=`<h3 style="color:green;">your score is ${toralscore} out of 400 and percentage is ${perc}% and grades is ${grades} , you are pass</h3> <a href="#"style="color:white; text-decoration:none;background-color: #4CAF50; border: none;  padding: 15px 32px;text-align: center;display: inline-block;font-size: 16px;font-size: 16px; cursor: pointer;" onclick="window.print()" onmousedown="bleep.play()">Print</a>` 
+                 }  
+                 else {
+               document.getElementById("showdata").innerHTML=`<h3 style="color:red;">your score is  ${toralscore} out of 400 and percentage is ${perc}% and grades is ${grades} , you are fail</h3> <a href="#"style="color:white; text-decoration:none;background-color: #4CAF50; border: none;  padding: 15px 32px;text-align: center;display: inline-block;font-size: 16px;font-size: 16px; cursor: pointer;" onclick="window.print()"onmousedown="bleep.play()">Print</a>` 
+           }
+         
+
+  	}
+  
+//   function getResolution() {
+//    var x=document.getElementById("demo").innerHTML="Your screen is: " + screen.availWidth  + "x" + screen.availHeight ;
+ 
+// }
+function res()
+{
+	document.getElementById("wd").value="";
+	document.getElementById("math").value="";
+document.getElementById("phy").value="";
+document.getElementById("chem").value="";
+document.getElementById("showdata").innerHTML="";
+   }
+  </script>
+
+</body>
+</html>

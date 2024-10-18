@@ -1,0 +1,61 @@
+*{
+  margin: 0px;
+  padding : 0px;
+}
+
+body{
+  font-family : sans-serif;
+  background : #F3FFBD;
+}
+
+#container{
+  width : 500px;
+  margin :10% auto;
+  background : #B2DBBF;
+  border-radius : 10px;
+}
+header {
+  background : #247BA0;
+  color : #fff;
+}
+header h2 {
+  text-align:center;
+  padding : 20px
+}
+
+section {
+  padding : 20px;
+}
+
+#quoatation-mark{
+  font-size: 30px;
+}
+p{
+  text-align : center;
+  font-size : 1.3em;
+  color : ;
+}
+#author{
+  margin-top : 10px;
+  text-align : right;
+}
+.button {
+  
+  padding :10px;
+  background : #247BA0;
+  color : white;
+  border : none;
+  border-radius : 5px;
+  margin : auto;
+  margin-top : 10px;
+}
+#newQuote{
+  float : right;
+}
+footer {
+  background : #247BA0; 
+  font-size : 12px;
+  text-align : center;
+  padding : 10px;
+  color : #ccc;
+}

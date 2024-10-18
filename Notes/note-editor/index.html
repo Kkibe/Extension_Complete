@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Note Editor</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="utf-8">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+</head>
+
+<body class="body themeLight">
+	<div class="loader">
+		<img src="https://img.pikbest.com/png-images/20190918/cartoon-snail-loading-loading-gif-animation_2734139.png!c1024wm0" alt="Loading..." />
+	</div>
+	<div class"scrollbutton">
+		<div class="page-container">
+			<nav class="nav">
+				<div class="nav__border">
+
+				</div>
+				<a href="#" class="title">
+					<div class="nav__icon-container">
+						<i class="material-icons">event_note</i>
+					</div>
+					<span class="nav__label"> Note Editor</span>
+				</a>
+				<a href="#" class="nav__link" id="HomeButton">
+					<div class="nav__icon-container">
+						<i class="material-icons">home</i>
+					</div>
+					<span class="nav__label"> Home</span>
+				</a>
+				<a href="#" class="nav__link">
+					<div class="nav__icon-container">
+						<i class="material-icons">sticky_note_2</i>
+					</div>
+					<span class="nav__label"> Sticky Notes</span>
+				</a>
+				<a href="#" class="nav__link">
+					<div class="nav__icon-container">
+						<i class="material-icons">savings</i>
+					</div>
+					<span class="nav__label"> Budget Tracker</span>
+				</a>
+				<a href="#" class="nav__link">
+					<div class="nav__icon-container">
+						<i class="material-icons">view_kanban</i>
+					</div>
+					<span class="nav__label"> Kanban Board</span>
+				</a>
+				<a href="#" class="nav__link">
+					<div class="nav__icon-container">
+						<i class="material-icons abc">abc</i>
+					</div>
+					<span class="nav__label"> Word Counter</span>
+				</a>
+				<a href="#" class="nav__link">
+					<div class="nav__icon-container">
+						<i class="material-icons">settings</i>
+					</div>
+					<span class="nav__label"> Settings</span>
+				</a>
+			</nav>
+			<main class="main">
+
+				<div class="clock">
+					<div class="Icon">
+						<i class="material-icons">
+							schedule
+						</i>
+					</div>
+					<span class="clock-time">
+						12:45
+					</span>
+					<span class="clock-ampm">
+						PM
+					</span>
+				</div>
+
+				<div class="Home-Page-Content" id="Home-Page-Content">
+					<h1 class="about">Note Editor?</h1>
+					<h2 class="about"><i class="material-icons">description</i>Description:</h2>
+					<h3 class="about">
+
+						Note Editor is a Mobile Application developed for multiple purposes including adding and deleting sticky notes, managing and visualising work using Kanban Board, counting the number of words, spaces, and letter is a phrase, sentence or a paragraph. And yes, you can plan budget using our Budget Planner too!
+					</h3>
+					<br>
+					<p class="noteforhomepage">Note: This website/application (whichever of these you are using) only works on laptop and i-pad.</p>
+					<img src="https://lh3.googleusercontent.com/fife/AAWUweWEgH7MKjbyf_W_ceoZSnviXHXqCvFpKrMXCQ3KWIKr4cJZML4NAZgR_SfW_xQRhF8O4IXQELuZxS3yeRm9zyB39tNhsHbnDh-g_4ClX2o9HzlloV9bkTX-VmOGXPpYN2NNPDapmGFJF2iB7uGbMzF5-UcUQDW95Acr4XA2KnovbifK9hSyL1Hj9NmNssDCH0sNDOrsbDgR7QbEwzEcMQKh0B-ma5z8dVDarcrGWqtv16ui85gAkEIPWfBxqku_JsUef8Gq1TUV2PtkHpXMzK4-NnNWT1ZaLAkTZNrH-mK2qI4Jj0OCwVZQB0su1ehNxINdLFKDxJRNWtYlRkT7Q144K0T9Ebuv569B3ch4fv03wU5nHARvPn90bJHwFJB27O3ofke-TQ3o3mUKRGgB5dOWv9BqZJwywgdc16OfTyzMfPMqtAfFk2Ts0d82OsxSTGgUolae07EgKzdl4T2TuwqC4sDtCU_IVr4G86B0Iy40V20HVfe5J25UbYvQAEe2oy8OXfu9Go0wtNnrQhaSbuz_X0rUcVaBDBnVjsnL0iKht0Arz1Hu9XjY3JfLQN0FeCShWJiElN5dlCeiLsxIZ-YDg6zpSShYhHGceOeMlJj3B7IGVe5J5gDcRj7CK5T22RhPdsN4vGsSRws2wYUWIRN14UROLM_0pBFTch5wpHtETK-ZhSTBpFC_FRQohUI8M20CAHwC1RbqRGx2Qf4Rve4IK6OM8Cn91w=w2880-h1578-ft" class="image">
+
+					<h1 class="title-more">More From Us:</h1>
+					<div class="more-from-us">
+						<div class="box 1">
+							<h1 class="heading">Youtube Channel <i class="material-icons you">smart_display</i></h1>
+							<h2 class="heading">Magic Classroom - The best educational Youtube Channel</h2>
+							<h3 class="titleLink">Visit Now: <a href="https://www.youtube.com/channel/UCuEOWCdp8yUdB24vMFW0eqg" class="heading">Click here to visit..</a><br><br>
+								Magic Classroom is a channel of fun learning and enjoyment videos created for children, ages 5 to 12. We hope you enjoy this video!
+
+								*****************************************<br>
+
+								Magic Classroom's videos accelerate phonemic awareness improving children's word comprehension, reading and writing skills. Magic Classroom's Videos also teach children basic skills; boosts memory, listening skills and ability to follow directions. This channel is great for brain breaks, indoor recess and literacy awareness. Children will laugh with joy as they participate in this super simple, easy to learn, fun - filled channel's videos that make learning fun and exciting.
+								<br><br>
+								Magic Classroom is a one stop shop for children to engage in a fun animated learning experience. The main focus of this channel is to help teach your little ones about the necessary information needed to succeed in life.<br><br>
+								New content is uploaded weekly. We hope you like our content but are always happy to hear from you on how we can improve and what you'd like to see in the pipeline! You can contact us through the comment section in any video uploaded by us.
+								<br><br>
+								If you enjoy our content, don't forget to support us and subscribe :)
+								<br><br>
+								Do Watch all of the Wonderful Videos from Magic Classroom on Youtube<i class="material-icons you">smart_display</i>!</a>
+							</h3>
+
+						</div>
+						<div class="box 2">
+							<h1 class="heading">Chat App <i class="material-icons chat">chat</i></h1>
+							<h2 class="heading">Hey! - The best chat app</h2>
+							<h3 class="titleLink">Download Now: <a href="https://appsgeyser.io/14982720/Hey" class="heading">Click here to download..</a><br><br>
+								Hey is a Mobile phone chatting application which is easily accessable and very convenient.
+								<br><br>
+								*****************************************
+								<br><br>
+								On Hey, you can chat with anyone in any corner of the world. But, make sure you don't enter personal data!
+								<br><br>
+								To login, you just have to type any false name of your choice. That's it! After you have typed a false name, just press the Join/Login button to chat with your friends!
+
+							</h3>
+						</div>
+					</div>
+				</div>
+				<div class="Sticky-Notes-Content">
+					<h2 class="Info InfoOne">Note: Your changes will be saved on Local Storage of your browser. So, if you visit our application/website again, you will be able to see the changes you made last time.</h2>
+					<div id="app">
+						<button class="add-note" type="button">+</button>
+					</div>
+				</div>
+				<div class="Budget-Tracker-Content">
+					<div id="main">
+						<h4 class="text-center mb-4" style="color: purple;">Expense Tracker App</h4>
+						<div>
+							<input class="addIncome" type="number" id="income" placeholder="Enter Your Income">
+							<button class="btn btnIncome btn-sm" onclick="addIncome()">Add Income</button>
+						</div>
+						<div id="info" class="mt-1 p-3">
+							<h4 class="text-white m-0">Your Balance</h4>
+							<h1 class="text-white" id="currentIncome"></h1>
+						</div>
+						<div class="mt-2">
+							<h5 style="color: purple;">Add Expense</h5>
+							<input style="margin-bottom:5px" class="addExpense" placeholder="Enter Amount" type="number" id="expense">
+							<input type="date" id="dateExpense" style="width: 180px;">
+							<select id="category" class="btnExpense" style="width: 175px;">
+								<option value="Categories">Categories</option>
+								<option value="Bike">Bike</option>
+								<option value="Education">Education</option>
+								<option value="Food">Food</option>
+								<option value="Gift">Gift</option>
+								<option value="Groceries">Groceries</option>
+								<option value="Health">Health</option>
+								<option value="House">House</option>
+								<option value="Rent">Rent</option>
+								<option value="Shopping">Shopping</option>
+								<option value="Transport">Transport</option>
+								<option value="Vacation">Vacation</option>
+							</select>
+							<button class="btn btnExpense btn-sm" style="width: 150px;" onclick="addExpense()">Add Expense</button>
+						</div>
+						<div class="mt-1" style="color: purple;">
+							<label for=""><b>Filters by:</b></label>
+							<select style="width: 135px;" id="showExpense" onchange="showFilterExpense()" style="color: purple;">
+								<option value="Categories">Categories</option>
+								<option value="Bike">Bike</option>
+								<option value="Education">Education</option>
+								<option value="Food">Food</option>
+								<option value="Gift">Gift</option>
+								<option value="Groceries">Groceries</option>
+								<option value="Health">Health</option>
+								<option value="House">House</option>
+								<option value="Rent">Rent</option>
+								<option value="Shopping">Shopping</option>
+								<option value="Transport">Transport</option>
+								<option value="Vacation">Vacation</option>
+							</select>
+							<select style="width: 140px;" id="dateFilter" onchange="showFilterExpense()" style="color: purple;">
+								<option value="Date">Date</option>
+							</select>
+						</div>
+						<div id="data" class="mt-2 p-3">
+							<table class="mb-3 " id="dataList">
+								<tr>
+									<td style="width: 70px; color: purple;"><b>Date</b></td>
+									<td style="width: 100px; color: purple;"><b>Category</b></td>
+									<td style="color: purple;"><b>Amount</b></td>
+									<td></td>
+									<td style="color: purple;"><b>Edit</b></td>
+									<td style="color: purple;"><b>Delete</b></td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+				<div class="Kanban-Board" id="Kanban-Board">
+					<h2 class="Info InfoTwo">Note: Your changes will not be saved on Local Storage of your browser. So, if you visit our application/website again, you will not be able to see the changes you made last time.</h2>
+					<div class="boards">
+						<div class="board">
+							<h3 class="KBtitle">To Do<i class="material-icons">
+									pending
+								</i>
+							</h3>
+							<button class="btn-add-card">+</button>
+							<div class="dropzone todo">
+
+							</div>
+						</div>
+						<div class="board">
+							<h3 class="KBtitle">In Progress<progress id="file" value="50" max="100"> 32% </progress></h3>
+							<button class="btn-add-card">+</button>
+							<div class="dropzone in-progress">
+							</div>
+						</div>
+						<div class="board">
+							<h3 class="KBtitle">Done<i class="material-icons">
+									check_circle_outline
+								</i></h3>
+							<button class="btn-add-card">+</button>
+							<div class="dropzone done">
+
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="Word__Counter">
+					<div class="container">
+						<h2 class="titleCounter">Word Counter</h2>
+						<textarea class="text-input" placeholder="Paste text here..."></textarea>
+						<div>
+							<strong>Word Count: </strong>
+							<span class="word-count">0</span>
+						</div>
+						<div>
+							<strong>Letter Count: </strong>
+							<span class="letter-count">0</span>
+						</div>
+						<div>
+							<strong>Number of Spaces: </strong>
+							<span class="space-count">0</span>
+						</div>
+					</div>
+				</div>
+				<div class="settings">
+					<div class="tabs">
+						<div class="tabs__sidebar">
+							<button class="tabs__button tabs__button--active" data-for-tab="1"> <i class="material-icons" id="tabIcon">
+									person
+								</i>Profile </button>
+							<button class="tabs__button" data-for-tab="2"> <i class="material-icons" id="tabIcon">
+									visibility
+								</i>Appearance </button>
+							<button class="tabs__button" data-for-tab="3"> <span class="material-icons" id="tabIcon">
+									lock
+								</span>Privacy & Security </button>
+							<button class="tabs__button" data-for-tab="4"> <i class="material-icons" id="tabIcon">
+									headphones
+								</i>Help & Support </button>
+							<button class="tabs__button" data-for-tab="5"> <i class="material-icons" id="tabIcon"> help
+								</i>About </button>
+						</div>
+						<div class="tabs__content tabs__content--active" data-tab="1">
+							<div class="headings">
+								<h2 class="Profile--Head"><span>1</span>PROFILE</h2>
+								<h2 class="Profile--Head"><span>2</span>PASSWORD</h2>
+							</div>
+							<div class="profileContent">
+								<div class="SetGrid">
+									<span class="contentSpan">First Name</span>
+									<br><input type="text" class="inputProfile">
+								</div>
+								<div class="SetGrid"><span class="contentSpan">Profile Photo</span>
+									<br><input type="file" class="inputProfile">
+								</div>
+								<div class="SetGrid"> <span class="contentSpan">Old Password</span>
+									<br><input type="password" class="inputProfile">
+								</div>
+								<div class="SetGrid">
+									<span class="contentSpan">Last Name</span>
+									<br><input type="text" class="inputProfile">
+								</div>
+								<div class="SetGrid"><span class="contentSpan">About</span>
+									<br><textarea></textarea>
+								</div>
+								<div class="SetGrid">
+									<span class="contentSpan">New Password</span>
+									<br><input type="password" class="inputProfile">
+								</div>
+								<div class="SetGrid"> <span class="contentSpan">Username</span>
+									<br><input type="text" class="inputProfile">
+								</div>
+								<div class="SetGrid"> <span class="contentSpan">Country, City</span>
+									<br><input type="text" class="inputProfile">
+								</div>
+								<div class="SetGrid">
+									<span class="contentSpan">Confirm New Password</span>
+									<br><input type="password" class="inputProfile">
+								</div>
+								<div class="SetGrid">
+									<span class="contentSpan">Email - ID</span>
+									<br><input type="email" class="inputProfile">
+								</div>
+
+								<div class="SetGrid">
+									<span class="contentSpan">Language</span>
+									<br><input type="text" class="inputProfile">
+								</div>
+
+							</div>
+
+						</div>
+						<div class="tabs__content" data-tab="2">
+							<h2>Appearance</h2>
+
+							<h3 class="subHead">Switch Theme</h3>
+							<div class="lightDarkToggle">
+								<h3>Light</h3>
+								<label class="toggle" for="myToggle">
+									<input class="toggle__input" name="" type="checkbox" id="myToggle">
+									<div class="toggle__fill"></div>
+								</label>
+								<h3>Dark</h3>
+							</div>
+							<h3 class="subHead">Pick A Color</h3>
+							<div class="colorBoxes">
+								<div class="color colorOne"></div>
+								<div class="color colorTwo"></div>
+								<div class="color colorThree"></div>
+								<div class="color colorFour"></div>
+								<div class="color colorFive"></div>
+								<div class="color colorSix"></div>
+								<div class="color colorSeven"></div>
+								<div class="color colorEight"></div>
+								<div class="color colorNine"></div>
+								<div class="color colorTen"></div>
+							</div>
+
+						</div>
+
+						<div class="tabs__content" data-tab="3">
+							<h1>Privacy & Security<span class="material-icons" id="tabIcon">
+									lock
+								</span></h1>
+							<h3> By accepting our Privacy Policy and Terms of Service in using our services or applications, you consent to our collection, storage, use and disclosure of your personal information as described in this Privacy Policy. If you have questions or concerns regarding our privacy policy or practices, please contact us.</h3>
+							<br>
+							<h3>The Privacy Policy only covers information that is collected through our websites and applications, and does not cover information that may be collected through any software downloaded from our websites.</h3>
+							<br>
+							<h2><span class="material-icons">
+									upcoming
+								</span>Table of Contents:</h2>
+							<h3>
+								1. Introduction<br>
+								2. Information We Collect<br>
+								3. How We Collect Information About You<br>
+								4. How We Use the Information We Collect<br>
+								5. Sharing of Your Information<br>
+								6. Our Policies Concerning Children<br>
+								7. How to Access and Update Your Information<br>
+								8. Your Sharing and Messaging Options<br>
+								9. Privacy Policies of Linked Sites and Advertisers<br>
+								10. Security of Your Information<br>
+								11. Changes to Our Privacy Policy<br>
+								12. Contact Us<br></h3>
+							<h2>1. Introduction</h2><br>
+							<h3>
+								We develop publishing products and services. We may also refer to our company as “We” or “Us“.
+								<br>
+								This Privacy Policy describes:
+								<br>
+								1. The information we collect, How we do so and the purposes of our collection.
+								<br>
+								2. How we use and with whom we share such information.
+								<br>
+								3. How you can access and update your information?
+								<br>
+								4. How we protect the information we store about you
+								<br>
+								If you have questions regarding this Privacy Policy or our collection and use of information, please contact us.
+								<br>
+								If you access our applications from a third party Social Networking Site (“SNS“), you may be required to also read and accept the SNS Terms of Service and Privacy Policy.
+								<br>
+							</h3>
+							<h2>2. Information We Collect</h2>
+							<h3>
+								<br>
+								When you use any application made by us, you allow us to access certain information from your profile on that site. <br><br>The information you allow us to access may vary by application and SNS platform, and it is affected by the privacy settings you establish at the SNS. <br><br>You can control and find out more about these settings at the SNS where you access our applications. For example, we may access and store some or all of the following information, as allowed by you, the SNS and your preferences:
+								<br>
+								1. Your First and Last Name<br>
+								2. Your Profile picture or its URL<br>
+								3. Your E-Mail ID<br>
+								4. Your Gender<br>
+								5. Your Birthday<br>
+								<br><br>
+								By using an application we made, you are authorizing us to collect, store, and use in accordance with this Privacy Policy any and all information that you agreed the SNS could provide to us through the SNS Application Programming Interface (“API”). <br>Your agreement takes place when you “accept” or “allow” (or similar terms) one of our applications on an SNS.
+								<br><br>
+								Customer Support Correspondence
+								<br><br>
+								When you ask for assistance, we may collect and store the contact information you provide (generally your name and e-mail address), information about your activity on the Service, and your profile picture. We may also store the correspondence and any information contained within.
+								<br><br>
+								Technical and Usage Information
+								<br><br>
+								When you access our websites or use our applications, we may collect (i) certain technical information about your computer system and (ii) usage statistics about your interactions with our websites and applications. This information is collected through the use of server log files and tracking technologies.
+								<br>
+							</h3>
+							<h2>3. How We Collect Information about You</h2>
+							<h3> <br>
+								We may collect information about you in any one or more of the following ways:
+								<br><br>
+								Information about Users and Usage
+
+								<br><br>
+								When you use one of our applications, we collect and store certain profile information that you provide directly or through the SNS or other third party website that is offering our application(s). <br><br>To provide a richer experience, we also collect information about your usage and interaction with other user and the Service. The bulk of this information is collected and stored through the use of web logs, which are files on our web servers that record actions taken on our applications and websites.
+								<br><br>
+								Cookies and Automated Information Collection
+								<br><br>
+								When you access our websites or use our applications, we collect certain technical information in order to (i) analyze the usage of our sites and services which allows us to improve the service, (ii) provide a more personalized experience and (iii) manage advertising. <br><br>We and service providers acting on our behalf, such as Google Analytics, use server log files and tracking technologies to collect and analyze certain types of technical information, including cookies, IP addresses, browser types, browser language, referring and exit pages, and URLs, platform type, the number of clicks, domain names, landing pages, pages viewed and the order of those pages, the amount of time spent on particular pages, and the date and time of activity on our websites or applications, and other similar information. <br>In some cases, we will associate this information with your user ID number for our internal use.
+								<br><br>
+								We may also employ other technologies including (i) web beacons, which allow us to know if a certain page was visited or whether an e-mail was opened; (ii) tracking pixels, which allow us to advertise more efficiently by excluding our current users from certain promotional messages or identifying the source of a new installation; (iii) local shared objects also known as flash cookies, which help us to prevent fraud, remember your in-application settings for features like music and to track your progress on certain in-application tasks.
+								<br><br>
+								You can set your web browser to warn you about attempts to place cookies on your computer, or limit the type of cookies you allow. Flash cookies operate differently than browser cookies and cookie management tools available in a web browser will not remove flash cookies. <br><br> If you disable cookies, you may lose some of the features and functionality of using our applications, as our cookies are necessary to track and enhance your experience. <br><br>Please note that companies delivering advertisements in our applications or on our websites may also use cookies or other technologies, and those practices are subject to their own policies.
+								<br><br>
+								Other Sources
+								<br><br>
+								We may collect or receive information from other sources including (i) other users who choose to upload their email contacts, and (ii) third party information providers. <br><br> This information will be used to supplement your profile – primarily to help you and your friends connect. It will be combined with other information we collect.
+								<br>
+							</h3>
+							<h2>4. How We Use the Information We Collect</h2><br>
+							<h3>
+								In general, we collect, store and use your information to provide you with a safe, smooth, efficient, and customized experience. For example, we may use information collected from you in any one or more of the following ways:
+								<br><br>
+								1. To register your account and allow use of our applications<br>
+								2. To administer applications and user experience<br>
+								3. To identify and suggest connections with other users<br>
+								4. To enable user-to-user communications<br>
+								5. To provide technical support and respond to user inquiries<br>
+								6. To prevent fraud or potentially illegal activities, and enforce our Terms of Service<br>
+								7. To notify users of in-app updates<br>
+								8. To provide leader boards and promote in-app achievements<br>
+								9. To communicate about new and current content, products and services<br>
+								10. To solicit input and feedback to improve our products and services and <br>customize your user experience
+								11. To resolve disputes, collect fees, and troubleshoot problems<br>
+								12. To analyze trends and user traffic and gather statistical information<br>
+								13. To inform users about new products or promotional offers
+								<br><br>
+								One important use of your information is communication. If you have provided your e-mail address to us, we'll use it to respond to (i) customer support inquiries, and (ii) keep you informed of your in-app activity, including comments from friends, notifications about in-app status such as “new story update” as well as notifications of badges and other requests. <br> We may also send promotional e-mail messages and promotional SMS messages (“Promotional Communications”) directly or in partnership with parties other than us.
+								<br><br>
+								You always have the choice to stop receiving Promotional Communications. When you receive Promotional Communications from us you will have the opportunity to “opt out” by (i) following the unsubscribe instructions provided in the Promotional Communication you receive or (ii) by editing your preferences. <br><br>Please note that despite your indicated e-mail preferences, we may still send you administrative messages regarding our applications, including, for example, administrative confirmations, and notices of updates to our Policies. For more information on your messaging options see “Your Sharing and Messaging Options” below.
+								<br>
+							</h3>
+							<h2>5. Sharing of Your Information</h2><br>
+							<h3>
+								We will share your information (in some cases personal information) with third parties, that is parties other than us, in the following circumstances:
+								<br><br>
+								Third Party Service Providers
+								<br><br>
+								We will provide your information to third party companies to perform services on our behalf, which may include payment processing, data analysis, e-mail delivery, hosting services, customer service and to assist us in our marketing efforts. <br> We direct all such third party service providers to maintain the confidentiality of the information disclosed to them and to not use your information for any purpose other than to provide services on our behalf.
+								<br><br>
+								Friends and Other Users
+								<br><br>
+								In some of our applications other users will be able to see your name or profile. Your profile may include your profile photo, which in certain cases can reveal your User ID number. <br><br>Access to this information may allow others to view the public information associated with your related SNS account.
+								<br><br>
+								Advertising of Third-Party Products and Services
+								<br><br>
+								We do not actively share personal information with third party advertisers for their direct marketing purposes unless you give us your consent. <br><br> If we wish to share in this fashion, we will ask for your consent. Advertisers, however, may obtain public information about you from your profile or other public sources.
+								<br><br>
+								We may use and share with third parties certain technical information (including IP addresses) or aggregated information to show general demographic and preference information among users. <br><br>We may also allow advertisers to collect technical or aggregated information, which they may share with us, with tracking technologies like cookies and web beacons. <br> <br>The information collected may be used to offer you targeted ad-selection and delivery in order to personalize your user experience by ensuring that advertisements for products and services you see will appeal to you, a practice known as behavioral advertising, and to undertake web analytics (i.e. to analyze traffic and other end user activity to improve your experience). <br> <br>To learn more about behavioral advertising or to opt-out of this type of advertising for participating ad networks, you can visit the Network Advertising Initiative website.
+								<br><br>
+								Our collection, use, and disclosure of anonymous and aggregated information are not subject to any of the restrictions in this Privacy Policy.
+								<br><br>
+								Safety, Security and Compliance with Law
+								<br><br>
+								Your information, and the contents of your private online communications, may be accessed and disclosed (i) in response to legal process (for example, a court order, search warrant or subpoena); (ii) when we have a good faith belief that we are required to disclose the information in response to legal process; (iii) in other circumstances in which we believe our applications or web sites are being used in the commission of a crime (including exchanging information with other companies and organizations for the purposes of fraud protection and credit risk reduction); (iv) when we have a good faith belief that there is an emergency that poses a threat to the safety of you or another person; and (v) when necessary either to protect the rights or property of us including to enforce our Terms of Service, or for us to render the service you have requested.
+								<br><br>
+								Sale or Merger
+								<br><br>
+								In the event that we undergo a business transition, such as a merger, acquisition by another company, or sale of all or a portion of its assets, we may transfer all of your information, including personal information, to the successor organization in such transition. <br> <br>If material changes to our privacy practices will occur as a result of the business transition, we will notify you and other users (in the manner described in Section 11) of the business transition prior to transferring your personal information.
+							</h3>
+							<br>
+							<h2>6. Our Policies Concerning Children</h2><br>
+							<h3>
+								Our websites and applications are not intended for children under the age of 13 and we do not knowingly collect any personal information from such children. <br> <br>Children under the age of 13 should not use our websites or applications at any time. In the event that we learn that we have inadvertently gathered personal information from children under the age of 13, we will take reasonable measures to promptly erase such information from our records.</h3>
+							<br>
+							<h2>7. How to Access and Update Your Information</h2><br>
+							<h3>Information We Receive From an SNS Where You Use Our Applications
+
+								<br><br>
+								To manage the information we receive about you from the SNS where you use our applications, you will need to follow the instructions at that site for updating your information and changing your privacy settings. <br> On Facebook, for example, as of the effective date of this Privacy Policy, you can edit your privacy settings for applications to do the following:
+							</h3>
+							<br><br>
+							<h3>1. control what your friends can share about you when using applications and websites<br>
+								2. block and remove specific applications from accessing your information and contacting you<br>
+								3. ignore application invitations from specific friends<br>
+								4. control who can see your activity in the “Friends' Recent Activity,” “Friends' Applications” and “Friends' applications” sections of the Facebook Applications and Games Dashboards.</h3>
+							<br><br>
+							<h3>Once we receive your information from an SNS, that information is stored and used by us in accordance with this Privacy Policy, and you may access and update that information as described below.
+								<br><br>
+								Other Methods of Accessing and Controlling your Information
+							</h3>
+							<br><br>
+							<h3>If you no longer want us to make active use of your information, you may send an e-mail to sample@sample.com. Place “Delete My Account” in the subject line and include your first name, last name, e-mail address and user ID number for the SNS from which you access our applications (if applicable) in the body of the e-mail. <br><br> We will respond to your request within thirty (30) days. Please note that certain records, for example those pertaining to payments or customer service matters, will be retained for legal and accounting purposes. If you have sent or posted content on the service, we may not be able to delete it.<br><br>
+								If you wish to review or change the information We have about you, e-mail us at the address provided herein.
+								You may change your e-mail preferences at any time, by visiting the contact page.
+								If you have additional questions about this Privacy Policy, contact us.</h3>
+							<br>
+							<h2>8. Your Sharing and Messaging Options</h2><br>
+							<h3>Information We Receive from Third-Party SNS Where You use our Application</h3>
+							<br><br>
+							<h3>If you use our applications at a third-party SNS, we will be able to access and store profile and other information about you as described above. <br> <br>The categories of information you share with us will depend, in part, on the privacy settings you have established at the SNS where you access the application. Many SNS allow you to control how you share information with third-party applications and websites, such as our applications, through your privacy settings on each SNS. <br> <br>We do not control what privacy settings those sites make available to their users, so we refer you to the privacy policies that are posted on those sites to learn what options they make available to their users. We do not offer an “opt out” option for specific fields that are shared by the SNS where you access and use the application(s).</h3>
+							<br><br>
+							<h3>Opting out of Promotional Communications
+								<br><br>
+								You can choose to opt out of receiving additional promotional e-mails from us by clicking on the “unsubscribe” link in any such e-mail, or contacting us. <br><br>Please note that once we receive your request, it may take an additional period of time for your opt-out to become effective. <br> <br>Your unsubscribe or e-mail preference change will be processed promptly, and in no event longer than 10 business days. <br><br>You can opt out of receiving SMS messages by texting STOP to the number we send from for that particular SMS program. In some cases a preference management page will also be available under the “Help” menu of the application that is offering the SMS program.
+							</h3>
+							<br><br>
+							<h3>When you install our apps on your mobile device you can choose to receive push notifications. These notifications can be turned off by modifying your mobile device settings for notifications.</h3>
+							<br><br>
+							<h3>Note that if you opt-out of our Promotional Communications, we may still e-mail or communicate with you from time to time if we need to provide you with information or if we need to request information from you with respect to a transaction initiated by you or for other legitimate non-marketing reasons.</h3>
+							<br>
+							<h2>9. Privacy Policies of Linked Sites and Advertisers</h2><br>
+							<h3>Our websites and applications may contain advertisements from companies other than us with their own websites. We are not responsible for the privacy practices or the content of such websites. If you have any questions about how these other websites use your information, you should review their policies and contact them directly.</h3>
+							<br>
+							<h2>10. Security of Your Information</h2><br>
+							<h3>We implement reasonable security measures to protect the security of your information both online and offline, and we are committed to the protection of customer information.</h3>
+							<br><br>
+							<h3>It is important that you protect and maintain the security of your account and that you immediately notify us of any unauthorized use of your account. <br><br> While we take reasonable precautions against possible security breaches of our websites and our customer databases and records, no website or Internet transmission is completely secure, and we cannot guarantee that unauthorized access, hacking, data loss, or other breaches will never occur. We urge you to take steps to keep your personal information safe. If you have questions about the security of our websites, please contact us.</h3>
+							<br><br>
+							<h3>Unfortunately, the transmission of information over the Internet is not completely secure. Although we strive to protect your personal data, we cannot guarantee the security of your data while it is being transmitted to our site; any transmission is at your own risk. Once we have received your information, we have procedures and security features in place to try to prevent unauthorized access.</h3>
+							<br><br>
+							<h2>11. Changes to Our Privacy Policy</h2><br>
+							<h3>If we decide to make material changes to our Privacy Policy, we will notify you and other users by placing a notice on sample.me or by sending you a notice to the e-mail address we have on file for you. <br><br> We may supplement this process by placing notices in our applications and on other websites we have. You should periodically check www.sample.com and this privacy page for updates.</h3>
+							<br>
+
+							<h2>12. Contact Us</h2><br>
+							<h3>
+								If you have any questions, comments or concerns regarding our Privacy Policy and/or practices, please contact us.
+							</h3>
+						</div>
+						<div class="tabs__content" data-tab="4">
+							<h1 class="AbH">Help & Support</h1>
+							<h2>Contact Us</h2>
+							<h3>Have any questions? We'd love to hear from you.</h3>
+							<div class="containerContactUs">
+								<div class="contentContactUs">
+									<div class="left-sideContactUs">
+										<div class="addressContactUs detailsContactUs">
+											<i class="fas fa-map-marker-alt"></i>
+											<div class="topicContactUs">Address</div>
+											<div class="text-oneContactUs">Sample Address</div>
+											<div class="text-twoContactUs">Sample Address</div>
+										</div>
+										<div class="phone detailsContactUs">
+											<i class="fas fa-phone-alt"></i>
+											<div class="topicContactUs">Phone</div>
+											<div class="text-oneContactUs">+0098 9893 5647</div>
+											<div class="text-twoContactUs">+0096 3434 5678</div>
+										</div>
+										<div class="email detailsContactUs">
+											<i class="fas fa-envelope"></i>
+											<div class="topicContactUs">Email</div>
+											<div class="text-oneContactUs">example@sample.com</div>
+											<div class="text-twoContactUs">ex.exxample@sample.com</div>
+										</div>
+									</div>
+									<div class="right-sideContactUs">
+										<div class="topic-textContactUs">Send us a message</div>
+										<p>If you have any work from me or any types of quries related to my tutorial, you can send me message from here. It's my pleasure to help you.</p>
+										<form action="#">
+											<div class="input-boxContactUs">
+												<input type="text" placeholder="Enter your name">
+											</div>
+											<div class="input-boxContactUs">
+												<input type="text" placeholder="Enter your email">
+											</div>
+											<div class="input-boxContactUs message-boxContactUs">
+												<textarea placeholder="Enter your Message"></textarea>
+											</div>
+											<div class="buttonContactUs">
+												<input type="button" value="Send Now">
+											</div>
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="tabs__content" data-tab="5">
+							<h1 class="	AbH">About</h1>
+							<h2 class="Info InfoTwo AboutNote">Note: Please don't set the navbar to collapsed mode while viewing this about page.</h2>
+							<img class="BgImg" src="https://images01.nicepage.com/c461c07a441a5d220e8feb1a/3c78d290f59250859f377a37/jh.jpg">
+							<img class="BookImg" src="https://images01.nicepage.com/c461c07a441a5d220e8feb1a/b3849f02f5d95d259a5425a2/5807340-min.png">
+							<h1 class="abHead about">Note Editor?</h1>
+							<h2 class=" descriptAbout about"><i class="material-icons">description</i>Description:</h2>
+							<h3 class="abBody about">
+
+								Note Editor is a Mobile Application developed for multiple purposes including adding sticky notes, managing and visualising work using Kanban Board and planning budget using our Budget Planner.
+							</h3>
+
+						</div>
+					</div>
+				</div>
+			</main>
+
+			<button class="scrollToTopButton"><span class="material-icons">arrow_upward</span></button>
+		</div>
+		<script></script>
+</body>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>

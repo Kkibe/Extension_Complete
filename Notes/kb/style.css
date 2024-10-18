@@ -1,0 +1,485 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap");
+:root {
+  --white: #fff;
+  --purple: #311f7d;
+  --pink: #df8395;
+  --orange: #fe9734;
+  --yellow: #ffd169;
+  --grey: #e8ecf2;
+  --light-grey: #f5f7fa;
+  --dark-grey: #b3bac3;
+  --text-grey-color: #606263;
+  --main-grid-rows: 80px 120px minmax(600px, calc(100vh - 200px));
+}
+
+/*--------------------------------------*/
+*,
+*::after,
+*::before {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+html {
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+body {
+  background: var(--white);
+}
+
+/*--------------------------------------*/
+/*--------------------------------------*/
+.container {
+  display: grid;
+  height: 100%;
+  grid-template-columns: 50px minmax(515px, 1fr) 300px;
+  row-gap: 20px;
+}
+
+/*------------------NAV BAR--------------------*/
+nav {
+  display: grid;
+  grid-template-rows: var(--main-grid-rows);
+  padding: 0px 10px;
+  box-shadow: 2px 0px 2px 0 rgba(219, 219, 219, 0.3);
+}
+nav .logo {
+  grid-row: span 1;
+  display: grid;
+  place-items: center;
+  font-size: 20px;
+}
+nav .logo a {
+  text-decoration: none;
+}
+nav .logo a i {
+  color: var(--purple);
+}
+nav ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+nav ul li {
+  margin-bottom: 30px;
+}
+nav .nav__items {
+  grid-row: 2/-1;
+  padding: 46px 0px;
+}
+nav .nav__items .nav__item > a {
+  text-decoration: none;
+  color: var(--dark-grey);
+  font-size: 20px;
+  transition: color 0.3s ease-in-out;
+}
+nav .nav__items .nav__item > a:hover {
+  color: var(--purple);
+}
+nav .nav__items .nav__item > a.nav__item--active {
+  color: var(--pink);
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+nav .nav__items .nav__item > a.nav__item--active::after {
+  content: "";
+  height: 8px;
+  width: 8px;
+  background: var(--pink);
+  position: absolute;
+  border-radius: 50%;
+  right: -19px;
+  border: 1px solid var(--white);
+}
+
+/*-----------------MAIN SECTION---------------------*/
+main {
+  display: grid;
+  grid-template-rows: var(--main-grid-rows);
+}
+main .main__header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 25px;
+}
+main .main__header > div {
+  color: var(--dark-grey);
+}
+main .main__header > div > * {
+  margin-left: 20px;
+  cursor: pointer;
+}
+main .main__header > div .fa-bell {
+  position: relative;
+}
+main .main__header > div .fa-bell::after {
+  content: "";
+  position: absolute;
+  height: 5px;
+  width: 5px;
+  border-radius: 50%;
+  background: var(--pink);
+}
+main .main__kanban__info {
+  background: var(--light-grey);
+  padding: 0px 25px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+main .main__kanban__info > img {
+  border-radius: 50%;
+  margin-right: 5px;
+}
+main .main__kanban__info > button {
+  color: var(--text-grey-color);
+  border: 0px;
+  outline: 0px;
+  cursor: pointer;
+  background: var(--grey);
+  padding: 6px 15px;
+  border-radius: 18px;
+  border: 1px solid var(--grey);
+  transition: all 0.3s ease-in-out;
+}
+main .main__kanban__info > button:first-of-type {
+  margin-right: auto;
+  margin-left: 10px;
+}
+main .main__kanban__info > button:hover {
+  background: var(--white);
+  border-color: var(--text-grey-color);
+}
+main .main__kanban {
+  background: var(--light-grey);
+  padding: 0px 25px;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+main .main__kanban::-webkit-scrollbar {
+  width: 0px;
+  /* Remove scrollbar space */
+  background: transparent;
+  /* Optional: just make scrollbar invisible */
+}
+main .main__kanban::after {
+  content: "";
+  padding-right: 25px;
+  height: 100%;
+}
+main .main__kanban .board {
+  flex: 0 0 280px;
+  margin-right: 20px;
+  height: 100%;
+}
+main .main__kanban .board__conatiner {
+  min-height: calc(100% - 120px);
+  max-height: calc(100% - 120px);
+  overflow-y: auto;
+  scrollbar-width: none;
+}
+main .main__kanban .board__conatiner::-webkit-scrollbar {
+  width: 0px;
+  /* Remove scrollbar space */
+  background: transparent;
+  /* Optional: just make scrollbar invisible */
+}
+main .main__kanban .board__header {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  margin-bottom: 30px;
+  padding: 0px 15px;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+main .main__kanban .board__header > span {
+  margin-right: auto;
+  margin-left: 10px;
+  color: var(--text-grey-color);
+}
+main .main__kanban .board__header > i {
+  font-size: 9px;
+  color: var(--text-grey-color);
+}
+main .main__kanban .board__header .fa-ellipsis-h {
+  cursor: pointer;
+}
+main .main__kanban .board__boxes {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  margin-bottom: 15px;
+  cursor: move;
+  padding: 20px;
+}
+main .main__kanban .board__boxes > .image-wrapper {
+  margin: -20px -20px 10px -20px;
+}
+main .main__kanban .board__boxes p {
+  font-size: 14px;
+  color: var(--text-grey-color);
+  margin-bottom: 30px;
+  line-height: 28px;
+}
+main .main__kanban .board__boxes__sections {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 20px;
+}
+main .main__kanban .board__boxes__sections > * {
+  height: 4px;
+  width: 20px;
+  border-radius: 10px;
+  background: var(--section-color);
+  margin-right: 4px;
+}
+main .main__kanban .board__boxes__info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+main .main__kanban .board__boxes__info i,
+main .main__kanban .board__boxes__info span {
+  color: var(--dark-grey);
+  font-size: 12px;
+}
+main .main__kanban .board__boxes__info span {
+  margin-left: 10px;
+  margin-right: auto;
+}
+main .main__kanban .board__boxes__info img {
+  border-radius: 50%;
+  margin-left: 5px;
+}
+main .main__kanban .board .add__card {
+  background: transparent;
+  cursor: pointer;
+  border: 0;
+  outline: 0;
+  color: var(--text-grey-color);
+  margin-top: 10px;
+}
+main .main__kanban .board__style {
+  background: var(--white);
+  width: 100%;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+/*----------------ASIDE----------------------*/
+aside {
+  display: grid;
+  grid-template-rows: var(--main-grid-rows);
+  padding: 0px 20px;
+  box-shadow: -2px 0px 2px 0 rgba(219, 219, 219, 0.3);
+}
+aside .breadcrumb {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 20px;
+  color: var(--dark-grey);
+}
+aside .breadcrumb i {
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+aside .breadcrumb i:hover {
+  color: var(--purple);
+}
+aside .user {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+aside .user__image {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 0px 5px var(--white), 0px 0px 0px 8px var(--pink);
+}
+aside .user__image img {
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+aside .user__info > p:first-child {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+aside .user__info > p:last-child {
+  font-size: 14px;
+  color: var(--text-grey-color);
+}
+aside .user__count {
+  height: 35px;
+  width: 35px;
+  background: var(--grey);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
+aside .daily__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+aside .daily__info .progress > p {
+  color: var(--text-grey-color);
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--purple);
+  font-size: 14px;
+}
+aside .daily__info .progress > p::after {
+  counter-reset: x var(--percentage);
+  content: counter(x) "%";
+}
+aside .daily__info .progress > div {
+  height: 10px;
+  width: 100%;
+  background: var(--light-grey);
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+}
+aside .daily__info .progress > div::before {
+  content: "";
+  background: var(--purple);
+  height: 100%;
+  width: calc(var(--percentage) * 1%);
+  position: absolute;
+  border-radius: 5px;
+}
+aside .daily__info .calendar__header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+aside .daily__info .calendar__header i {
+  margin-left: 5px;
+  cursor: pointer;
+}
+aside .daily__info .calendar__header span:last-child {
+  color: var(--purple);
+  font-size: 14px;
+}
+aside .daily__info .calendar__body {
+  padding: 15px 10px;
+  background: var(--light-grey);
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+}
+aside .daily__info .calendar__body span {
+  padding: 5px;
+  font-size: 14px;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+aside .daily__info .calendar__body span.week__name {
+  cursor: auto;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+aside .daily__info .calendar__body span.start, aside .daily__info .calendar__body span.end {
+  background: var(--grey);
+  position: relative;
+}
+aside .daily__info .calendar__body span.start::before, aside .daily__info .calendar__body span.end::before {
+  counter-reset: x var(--value);
+  content: counter(x);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 50%;
+  font-weight: 700;
+  color: var(--white);
+  display: grid;
+  place-items: center;
+}
+aside .daily__info .calendar__body span.start {
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+}
+aside .daily__info .calendar__body span.start::before {
+  background: var(--pink);
+}
+aside .daily__info .calendar__body span.start ~ span:not(.end) {
+  background: var(--grey);
+  font-weight: 700;
+}
+aside .daily__info .calendar__body span.start ~ span.end ~ span {
+  background: transparent;
+  font-weight: 400;
+}
+aside .daily__info .calendar__body span.end {
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+}
+aside .daily__info .calendar__body span.end::before {
+  background: var(--purple);
+}
+aside .daily__info .marketing__banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+aside .daily__info .marketing__banner > p {
+  font-size: 20px;
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+aside .daily__info .marketing__banner > button {
+  color: var(--white);
+  cursor: pointer;
+  border: 0;
+  outline: 0;
+  padding: 10px 35px;
+  font-weight: 700;
+  border-radius: 25px;
+  background: linear-gradient(45deg, #e67f96 0%, #ee9aa3 33%, #f3abab 66%, #f8bbb2 100%);
+}
+
+.dragging {
+  border: 2px solid var(--pink);
+}

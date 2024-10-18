@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Burst particles POC</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!--
+   I wanted some particles for a project to give it some pzazz - I didn't want it to be JS heavy as I will already have things going on, so the animations are entirely CSS - just using JS to initialise and activate.
+   These particle sources will be placed under objects.
+
+   The particles are constructed from a stem which rotates 30 degrees (the wrapper is set at a random angle so the 30 degree animation is in a random orientation) at a random speed and when activated the particle will move the length of the moving stem making the particle so it wiggles around. Particles are split into 4 and the first group has no delay but a longer animation and the others have a delay - so the particles you first see you can follow and see the whole animation as they disappear last, and the others give a longer lasting volume.
+
+   Particle sources can be edited:
+      [particle-count]    - how many particles it will make
+      [particle-distance] - maximum reach of the particles between 10% and 100% of the given value
+      [particle-color]    - comma seperated colours
+   (Add .particle-do to start the animation)
+
+   Edit: I really didn't need to say any of that stuff, you aren't an idiot
+
+   TIL that "pzazz" is spelt that way
+
+
+
+   Edit: https://codepen.io/z-/pen/yRJVMe for core functions and styles
+-->
+
+
+<div class="example-source example-green source" particle-count="60" particle-distance="200" particle-color="#2ECC71,#2ABA66"></div>
+<div class="example-source example-red source" particle-count="60" particle-distance="200" particle-color="#ED5565,#DA4453"></div>
+<div class="example-source example-yellow source" particle-count="60" particle-distance="200" particle-color="#FFCE54,#F6BB42"></div>
+<div class="example-source example-blue source" particle-count="60" particle-distance="200" particle-color="#5D9CEC,#4A89DC"></div>
+
+<div id="button-do-animation" particle-do=".example-green" particle-set-class-on-do="green">Show Particle Animation</div>
+<div class="select-color green selected" set-attr-target="#button-do-animation" set-attr="particle-do,.example-green;particle-set-class-on-do,green"></div>
+<div class="select-color red" set-attr-target="#button-do-animation" set-attr="particle-do,.example-red;particle-set-class-on-do,red"></div>
+<div class="select-color yellow" set-attr-target="#button-do-animation" set-attr="particle-do,.example-yellow;particle-set-class-on-do,yellow"></div>
+<div class="select-color blue" set-attr-target="#button-do-animation" set-attr="particle-do,.example-blue;particle-set-class-on-do,blue"></div>
+<!-- partial -->
+  <script src='https://codepen.io/z-/pen/jvReOb/a8e37caf2a04602ea5815e5acedab458.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
